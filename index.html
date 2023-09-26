@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title>NidalRaed Portfolio</title>
+    <style>
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: montserrat;
+}
+nav {
+	background: #262529;
+	height: 80px;
+	width: 100%;
+    position: sticky;
+}
+label.logo {
+	color: white;
+	font-size: 35px;
+	line-height: 80px;
+	padding: 0 100px;
+	font-weight: bold;
+}
+nav ul {
+	float: right;
+	margin-right: 20px;
+}
+nav ul li {
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 5px;
+}
+nav ul li a {
+	color: white;
+	font-size: 17px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;
+}
+a.active, a:hover {
+	background: #1d1d1f;
+	transition: .5s;
+}
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+@media (max-width: 952px){
+	label.logo{
+		font-size: 30px;
+		padding-left: 50px;
+	}
+	nav ul li a{
+		font-size: 16px;
+	}
+}
+@media (max-width: 858px){
+	.checkbtn {
+		display: block;
+	}
+	ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #141315;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+	nav ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+	nav ul li a {
+		font-size: 20px;
+	}
+	a:hover, a.active {
+		background: none;
+		color: #000000;
+	}
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+:root {
+  --color: #4973ff;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-sherif;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  position: relative;
+  background: #333333;
+  color: white;
+  height: 88vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  margin: 0 0 10px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: var(--color);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+  content: '';
+  position: absolute;
+  width: 300vw;
+  height: 300vw;
+  top: -65vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.waves::before {
+  border-radius: 44%;
+  background: rgba(51, 51, 51, 1);
+  animation: waves 8s linear infinite;
+}
+
+.waves::after {
+  border-radius: 44%;
+  background: rgba(51, 51, 51, 0.5);
+  animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+section {
+            padding: 80px 0;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #131e9789;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #666;
+        }
+        #skills{
+            position: relative;
+  z-index: 1;
+  font-size: 4.5rem;
+  margin: 0 0 10px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.9);
+        }
+        .projects {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .project-card {
+            width: 300px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 94, 255, 0.945),0  20px 16px rgba(0, 0, 0, 0.945);
+        }
+
+        .project-card img {
+            width: 80%;
+            height: auto;
+            padding: 15PX;
+        }
+
+        .project-card-content {
+            padding: 10px;
+
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            color: #666;
+        }
+        #y{
+            height: 260px;
+
+
+        }
+        .button{
+            position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+        }
+        .button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button:hover{
+    border: #f4f4f4;
+    background-color: #4973ff;
+}
+.button1{
+            position: relative;
+  z-index: 1;
+  font-size: 1.1rem;
+        }
+        .button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1:hover{
+    border: #f4f4f4;
+    background-color: #4973ff;
+}
+
+* {
+    scroll-behavior:smooth;
+}
+/* Add this CSS to style the skills section */
+
+/* Add this CSS to style the skills section differently */
+
+
+
+/* Add this CSS to style the skills section rows and items */
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.skill {
+    width: 200px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 94, 255, 0.352), 0 20px 16px rgba(0, 0, 0, 0.945);
+}
+
+.skill-icon {
+    background-color: #4973ff;
+    padding: 20px;
+    text-align: center;
+}
+
+.skill-icon img {
+    width: 80px;
+    height: 80px;
+}
+
+
+.footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .social-icons {
+            text-align: center;
+        }
+        
+        .social-icons a {
+            margin: 10px;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        /* Define colors for each social network */
+        .facebook-icon { color: #1877F2; }
+        .twitter-icon { color: #1DA1F2; }
+        .linkedin-icon { color: #0077B5; }
+        .instagram-icon { color: #E4405F; }
+        .whatsapp-icon { color: #25D366; }
+        .github-icon { color: #f5f5f5; }
+        /* Add more styles for other social networks as needed */
+        
+        /* Hover effect to change color */
+        .social-icons a:hover {
+            color: #fff;
+        }
+        
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 200px;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2),px 15px 20px rgba(16, 8, 176, 0.751);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            max-width: 300px;
+            border: 1px solid black;
+            height: 200px;
+            width: 350px;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 8px 15px 20px rgba(16, 8, 176, 0.751);
+        }
+
+        .contact-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-icon {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .qualifications-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .qualification {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .qualification:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .qualification-icon img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        .qualification-details h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .qualification-details p {
+            font-size: 16px;
+            color: #666;
+        }
+
+.button{
+        background: #ffffff;
+        color: #041cf9;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        transition: .4s;
+        border-radius: 30px;
+        padding: 13px 30px;
+        border: 1px solid #041cf9;
+
+}
+.button:hover{
+        background:transparent;
+        border: 2px solid;
+
+    }
+    .button1{
+        background: #041cf9;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        transition: .4s;
+        border-radius: 30px;
+        padding: 13px 30px;
+
+    }
+    .button1:hover{
+        background:transparent;
+        border: 2px solid;
+
+    }
+
+
+
+    </style>
+</head>
+<body>
+	<nav>
+		<input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i>
+		</label>
+		<label class="logo">Nidal Raed</label>
+		<ul>
+			<li><a class="active" href="#h">Home</a></li>
+            <li><a  href="#qe">Edu & trin</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#projects">Project</a></li>
+			<li><a href="#Contact">contact me</a></li>
+		</ul>
+	</nav>
+    <section class="hero" id="h">
+        <div class="content">
+          <h2>Hi<img src="C:\Users\Orange\Desktop\new11\WEL.png"> Im Nidal Raed</h2>
+          <p>Im web developer || App developer</p><br><br>
+          <button class="button1"> Download CV </button>
+         <a href="aboutme.html"><button class="button">  who I am ? </button></a>
+
+          </div>
+        <div class="waves"></div>
+      </section>
+      <section id="qe">
+        <h2>Qualifications</h2>
+        <div class="qualifications-container">
+            
+        <div class="qualification">
+            <div class="qualification-icon">
+                <img src="C:\Users\Orange\Desktop\new11\al.png" alt="Degree Icon" style="height: 120px;width:120px ;">
+            </div>
+            <div class="qualification-details">
+                <h2>Bachelor's Degree</h2>
+                <p>Computer Science</p>
+            </div>
+        </div>
+        <div class="qualification">
+            <div class="qualification-icon">
+                <img src="C:\Users\Orange\Desktop\new11\Orange.png" alt="Certificate Icon">
+            </div>
+            <div class="qualification-details">
+                <h2>Web Developer</h2>
+                <p>OrangeCodeAcademy</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="skills">
+        <h2> Technical Skills</h2>
+        <div class="skills-container">
+            <!-- Row 1 -->
+            <div class="skills-row">
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-html-5-96.png" alt="HTML">
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-css3-144.png" alt="CSS">
+                    </div>
+                    
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-javascript-144.png" alt="JavaScript">
+                    </div>
+                    
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-figma-144.png" alt="Figma">
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="skills-row">
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\bootstrap.png" alt="Bootstrap">
+                    </div>
+                    
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-flutter-144.png" alt="Flutter">
+                    </div>
+                    
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-firebase-144.png" alt="Firebase">
+                    </div>
+                    
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <img src="C:\Users\Orange\Desktop\new11\icons8-nodejs-144.png" alt="Node.js">
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+    <section id="projects">
+        <h2>My Work </h2>
+        <div class="projects">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <img src="C:\Users\Orange\Desktop\new11\HRepar.jfif" alt="Project 1" id="y">
+                <div class="project-card-content">
+                    <h3 class="project-title"> HRepiar App</h3>
+                    <p class="project-description">Uesed FLUTTER & Firbase <br><br><a href="pro.html" style="color: blue;"><b>Read More</b></a></p>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <img src="C:\Users\Orange\Desktop\new11\grid.png" alt="Project 2" ><BR><BR>
+                <div class="project-card-content">
+                    <h3 class="project-title">flex & grid Project</h3>
+                    <p class="project-description">Uesed HTML5 & CSS3 <br><br><a href="https://github.com/nidalraed/flex-grid-repo" style="color: blue;"><b>Read More</b></a></p>
+                </div>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="project-card">
+                <img src="C:\Users\Orange\Desktop\new11\bootstrap.png" alt="Project 3" ><BR><BR>
+                <div class="project-card-content">
+                    <h3 class="project-title">bootstrap</h3>
+                    <p class="project-description">Uesed bootstrap <br><br><a href="https://github.com/nidalraed/flex-grid-repo" style="color: blue;"><b>Read More</b></a></p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="C:\Users\Orange\Desktop\new11\icons8-figma-144.png" alt="Project 3"><BR><BR>
+                <div class="project-card-content">
+                    <h3 class="project-title">Figma</h3>
+                    <p class="project-description">wireframe & mockup <br><br><a href="https://github.com/nidalraed/wireframe-mockup-Rep" style="color: blue;"><b>Read More</b></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="Contact">
+    <h2> Contact Me </h2>
+    <div class="contact-container">
+        <div class="contact-card">
+            <i class="contact-icon">📞</i>
+            <h3>Phone</h3>
+            <p><b>+962-780785034</b></p>
+        </div>
+        <div class="contact-card">
+            <i class="contact-icon">✉️</i>
+            <h3>Email</h3>
+            <p><b>nedalraed55@gmail.com</b></p>
+        </div>
+        <div class="contact-card">
+            <i class="contact-icon">📍</i>
+            <h3>Location</h3>
+            <p><b>Marka, Amman</b></p>
+        </div>
+    </div>
+
+</section>
+      
+    <footer class="footer">
+       <p>&copy; 2023 Nidal Raed. All Rights Reserved.</p><br><br>
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a class="facebook-icon" href="https://www.facebook.com/nidal.raed.71/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <!-- Twitter -->
+            <a class="twitter-icon" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <!-- LinkedIn -->
+            <a class="linkedin-icon" href="https://www.linkedin.com/in/nidal-raed-a5547321a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="github-icon" href="https://github.com/nidalraed" target="_blank"><i class="fab fa-github"></i></a>
+            <!-- Instagram -->
+            <a class="instagram-icon" href="https://www.instagram.com/nidal_raed7/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- WhatsApp -->
+            <a class="whatsapp-icon" href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <!-- Add more social networks with their icons and colors -->
+        </div>
+    </footer>
+    
+</body>
+</html>
