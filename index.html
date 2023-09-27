@@ -161,11 +161,23 @@ body {
 }
 
 .hero p {
-  position: relative;
-  z-index: 1;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.4;
+    position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    text-align: center; /* ترتيب النص من اليسار إلى اليمين */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: revealText 5s forwards; /* أنيميشن لعرض النص تدريجياً */
+}
+
+
+@keyframes revealText {
+    to {
+        width: 100%; /* يزيد عرض الخلفية للنص ببطء لكتابة التأثير */
+    }
 }
 
 
